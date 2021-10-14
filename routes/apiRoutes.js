@@ -1,9 +1,10 @@
 const fs = require('fs');
 const uuid = require('../helpers/uuid')
+const apiRouter = require('express').Router();
 
-const apiRoutes = function () {
+
     //get route
-    app.get('/api/notes', (req, res) => {
+    apiRouter.get('/api/notes', (req, res) => {
         // Log that a GET request was received
         console.info(`${req.method} request received to get notes`);
 
@@ -16,7 +17,7 @@ const apiRoutes = function () {
              let data = JSON.parse(data);
              res.json(data);
            });*/
-        if (err) throw err;
+        
         res.json(data);
 
 
@@ -25,7 +26,7 @@ const apiRoutes = function () {
 
 
     //post route
-    app.post('/api/notes', (req, res) => {
+    apiRouter.post('/api/notes', (req, res) => {
         // Log that a POST request was received
         console.info(`${req.method} request received to add a note`);
 
@@ -52,7 +53,7 @@ const apiRoutes = function () {
 
 
     //delete
-    app.delete("/api/notes/:id", (req, res) => {
+    apiRouter.delete("/api/notes/:id", (req, res) => {
 
         // Fetched id to delete
         let noteId = request.params.id.toString();
@@ -73,8 +74,8 @@ const apiRoutes = function () {
         // Send response
         response.json(newData);
     });
-};
 
-module.exports= apiRoutes;
+
+module.exports= apiRouter;
 
 
