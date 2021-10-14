@@ -8,9 +8,15 @@ app.get('/api/notes', (req, res) => {
 
     // Read notes
     let data = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
+    
+    fs.readFile('./db/db.json', (err, data) => {
+        if (err) throw err;
+        //send notes back
+        let data = JSON.parse(data);
+        res.json(data);
+      });
 
-    //send notes back
-    res.json(data);
+    
 });
 
 
@@ -36,5 +42,32 @@ app.post('/api/notes', (req, res) => {
 
 
     console.log("successful post!");
+    res.json(data);
 
 });
+
+
+//delete
+app.delete("/api/notes/:id", (req, res) => {
+
+    // Fetched id to delete
+    let noteId = request.params.id.toString();
+    
+    console.log(`DELETE note request for noteId: ${noteId}`);
+
+    // Read data from 'db.json' file
+    let data = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
+
+    // grab all notes without that id
+    const newData = data.filter( note => note.id.toString() !== noteId );
+
+    // Overwrite file with new data
+    fs.writeFileSync('./db/db.json', JSON.stringify(newData));
+    
+    console.log(`\nSuccessfully deleted note with id : ${noteId}`);
+
+    // Send response
+    response.json(newData);
+});
+
+
