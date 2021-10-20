@@ -1,9 +1,8 @@
 const express = require('express');
+const path = require("path");
 const apiRoutes = require('./routes/apiRoutes');
-const htmlRoutes = require('./routes/htmlRoutes');
 
-const PORT = process.env.PORT || 3001;
-
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 //middleware
@@ -13,8 +12,21 @@ app.use(express.static('public'));
 
 //grabbing routes
 app.use('./routes/apiRoutes',apiRoutes);
-app.use('./routes/htmlRoutes',htmlRoutes);
 
+// GET Route for homepage
+app.get("/", (req, res) =>
+  res.sendFile(path.join(__dirname, "./public/index.html"))
+);
+
+// GET Route for notes page
+app.get("/notes", (req, res) =>
+  res.sendFile(path.join(__dirname, "./public/notes.html"))
+);
+
+// Wildcard route to direct users to a 404 page
+app.get("*", (req, res) =>
+  res.sendFile(path.join(__dirname, "./public/404.html"))
+);
 
 //app listen
 app.listen(PORT, () =>
