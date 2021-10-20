@@ -10,7 +10,7 @@ const apiRouter = require('express').Router();
 
         // Read notes
         let data = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
-      
+        
         res.json(data);
 
 
