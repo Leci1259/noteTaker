@@ -37,8 +37,8 @@
   
   ## Application
   
-  [Deployed application](https://leci1259.github.io/noteTaker/)
-  [Website Preview](https://github.com/Leci1259/noteTaker/blob/main/public/assets/img/Screenshot%202021-10-20%20162239.png)
+  [Deployed application](https://leci1259.github.io/noteTaker/)  
+  ![Website Preview](https://github.com/Leci1259/noteTaker/blob/main/public/assets/img/Screenshot%202021-10-20%20162239.png)
   
   ## Contribution 
 
