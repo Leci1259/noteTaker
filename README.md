@@ -14,6 +14,8 @@
   
   - [Usage](#usage) 
 
+  - [Application](#Application)
+
   - [Contribution](#credits) 
 
   - [Tests](#tests) 
@@ -33,6 +35,11 @@
 
   Personal Usage
   
+  ## Application
+  
+  [Deployed application](https://leci1259.github.io/noteTaker/)
+  [Website Preview](https://github.com/Leci1259/noteTaker/blob/main/public/assets/img/Screenshot%202021-10-20%20162239.png)
+  
   ## Contribution 
 
   None
@@ -47,8 +54,7 @@
   Email:  lesianareid@gmail.com
   Github: [Github Repo](https://github.com/leci1259)
   
-  
-  
-## License
-Released under MIT License Copyright (c) 2013 Mark Otto. Copyright (c) 2017 Andrew Fong 
-[MIT](https://opensource.org/licenses/MIT)
+    
+  ## License
+  Released under MIT License Copyright (c) 2013 Mark Otto. Copyright (c) 2017 Andrew Fong 
+  [MIT](https://opensource.org/licenses/MIT)
