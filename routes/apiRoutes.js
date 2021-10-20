@@ -4,7 +4,7 @@ const apiRouter = require('express').Router();
 
 
     //get route
-    apiRouter.get('/api/notes', (req, res) => {
+    apiRouter.get('/notes', (req, res) => {
         // Log that a GET request was received
         console.info(`${req.method} request received to get notes`);
 
@@ -19,7 +19,7 @@ const apiRouter = require('express').Router();
 
 
     //post route
-    apiRouter.post('/api/notes', (req, res) => {
+    apiRouter.post('/notes', (req, res) => {
         // Log that a POST request was received
         console.info(`${req.method} request received to add a note`);
 
@@ -46,7 +46,7 @@ const apiRouter = require('express').Router();
 
 
     //delete
-    apiRouter.delete("/api/notes/:id", (req, res) => {
+    apiRouter.delete("/notes/:id", (req, res) => {
 
         // Fetched id to delete
         let noteId = request.params.id.toString();
@@ -65,7 +65,7 @@ const apiRouter = require('express').Router();
         console.log(`\nSuccessfully deleted note with id : ${noteId}`);
 
         // Send response
-        response.json(newData);
+        res.json(newData);
     });
 
 

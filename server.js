@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 //grabbing routes
-app.use('./routes/apiRoutes',apiRouter);
+app.use('/api',apiRouter);
 
 // GET Route for homepage
 app.get("/", (req, res) =>
