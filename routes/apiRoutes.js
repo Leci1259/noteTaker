@@ -10,14 +10,7 @@ const apiRouter = require('express').Router();
 
         // Read notes
         let data = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
-
-        /* fs.readFile('./db/db.json', (err, data) => {
-             if (err) throw err;
-             //send notes back
-             let data = JSON.parse(data);
-             res.json(data);
-           });*/
-        
+      
         res.json(data);
 
 
