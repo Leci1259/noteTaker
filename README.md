@@ -37,7 +37,7 @@
   
   ## Application
   
-  [Deployed application](https://leci1259.github.io/noteTaker/)  
+  [Deployed application](https://reid-notes-taker.herokuapp.com/)  
   ![Website Preview](https://github.com/Leci1259/noteTaker/blob/main/public/assets/img/Screenshot%202021-10-20%20162239.png)
   
   ## Contribution 
